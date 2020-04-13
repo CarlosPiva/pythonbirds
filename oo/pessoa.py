@@ -18,3 +18,10 @@ if __name__ == '__main__':
     print(carlos.idade)
     for filho in carlos.filhos:
          print(filho.nome)
+    #atributo dinâmico (fazendo a atribuição aqui msm)
+    carlos.sobrenome = 'Roberto'
+    print(carlos.sobrenome)
+    del carlos.filhos
+    #atributos de instâncias ficam presentes no __dict__
+    print(carlos.__dict__)
+    print(piva.__dict__)

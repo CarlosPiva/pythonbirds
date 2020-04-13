@@ -1,4 +1,7 @@
 class Pessoa:
+    #atributo de classe/instancia
+    olhos = 2
+
     def __init__(self, *filhos, nome=None, idade=35):
         self.idade = idade
         self.nome = nome
@@ -22,6 +25,13 @@ if __name__ == '__main__':
     carlos.sobrenome = 'Roberto'
     print(carlos.sobrenome)
     del carlos.filhos
+    piva.olhos = 3
+    del piva.olhos
     #atributos de instâncias ficam presentes no __dict__
     print(carlos.__dict__)
     print(piva.__dict__)
+    Pessoa.olhos = 1
+    print(Pessoa.olhos)
+    print(carlos.olhos)
+    print(piva.olhos)
+    print(id(Pessoa.olhos), id(carlos.olhos), id(piva.olhos))
